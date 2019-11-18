@@ -17,6 +17,4 @@ int main()
 
     auto cat2 = static_cast<Cat*>(&cat1);
     cat2->breakThings();
-
-    std::cout << "Hello Easy C++ project!" << std::endl;
 }
