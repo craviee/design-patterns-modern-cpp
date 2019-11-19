@@ -15,6 +15,6 @@ jobs:
         make
     - name: run Builder
       run: |
-        cd Creational/Builder
-        make run
+        cd Creational/Builder/bin
+        ./main.out
   
