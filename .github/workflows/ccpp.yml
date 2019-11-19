@@ -1,0 +1,30 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: make Builder
+      run: |
+        cd Creational/Builder
+        make
+    - name: test Builder
+      run: ./Creational/Builder/bin/main.out
+    - name: make Factory
+      run: |
+        cd Creational/Factory
+        make
+    - name: test Factory
+      run: ./Creational/Factory/bin/main.out
+    - name: make Prototype
+      run: |
+        cd Creational/Prototype
+        make
+    - name: test Prototype
+      run: ./Creational/Prototype/bin/main.out
+      
