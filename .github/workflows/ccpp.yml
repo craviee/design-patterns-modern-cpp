@@ -13,8 +13,18 @@ jobs:
       run: |
         cd Creational/Builder
         make
-    - name: run Builder
+    - name: test Builder
+      run: ./Creational/Builder/bin/main.out
+    - name: make Factory
       run: |
-        cd Creational/Builder/bin
-        ./main.out
-  
+        cd Creational/Factory
+        make
+    - name: test Factory
+      run: ./Creational/Factory/bin/main.out
+    - name: make Prototype
+      run: |
+        cd Creational/Prototype
+        make
+    - name: test Prototype
+      run: ./Creational/Prototype/bin/main.out
+      
