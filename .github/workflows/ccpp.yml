@@ -10,21 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: make Builder
-      run: |
-        cd Creational/Builder
-        make
+      run: make -C Creational/Builder
     - name: test Builder
       run: ./Creational/Builder/bin/main.out
     - name: make Factory
-      run: |
-        cd Creational/Factory
-        make
+      run: make -C Creational/Factory
     - name: test Factory
       run: ./Creational/Factory/bin/main.out
     - name: make Prototype
-      run: |
-        cd Creational/Prototype
-        make
+      run: make -C Creational/Prototype
     - name: test Prototype
       run: ./Creational/Prototype/bin/main.out
       
