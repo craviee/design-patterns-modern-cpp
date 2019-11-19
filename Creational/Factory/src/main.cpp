@@ -17,4 +17,6 @@ int main()
 
     auto cat2 = static_cast<Cat*>(&cat1);
     cat2->breakThings();
+    
+    return 0;
 }
