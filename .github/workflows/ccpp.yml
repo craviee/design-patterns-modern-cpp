@@ -21,4 +21,9 @@ jobs:
       run: make -C Creational/Prototype
     - name: test Prototype
       run: ./Creational/Prototype/bin/main.out
+    - name: make Singleton
+      run: make -C Creational/Singleton
+    - name: test Singleton
+      run: ./Creational/Singleton/bin/main.out
+
       
