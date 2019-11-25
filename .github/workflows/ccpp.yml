@@ -25,5 +25,9 @@ jobs:
       run: make -C Creational/Singleton
     - name: test Singleton
       run: ./Creational/Singleton/bin/main.out
+    - name: make Adapter
+      run: make -C Structural/Adapter
+    - name: test Adapter
+      run: ./Structural/Adapter/bin/main.out
 
       
