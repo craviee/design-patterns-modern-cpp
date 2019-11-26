@@ -29,5 +29,9 @@ jobs:
       run: make -C Structural/Adapter
     - name: test Adapter
       run: ./Structural/Adapter/bin/main.out
+    - name: make Bridge
+      run: make -C Structural/Bridge
+    - name: test Bridge
+      run: ./Structural/Bridge/bin/main.out
 
       
