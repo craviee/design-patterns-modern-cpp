@@ -37,5 +37,9 @@ jobs:
       run: make -C Structural/Composite
     - name: test Composite
       run: ./Structural/Composite/bin/main.out
+    - name: make Decorator
+      run: make -C Structural/Decorator
+    - name: test Decorator
+      run: ./Structural/Decorator/bin/main.out
 
       
