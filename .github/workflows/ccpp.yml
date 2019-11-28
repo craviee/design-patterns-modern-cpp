@@ -33,5 +33,9 @@ jobs:
       run: make -C Structural/Bridge
     - name: test Bridge
       run: ./Structural/Bridge/bin/main.out
+    - name: make Composite
+      run: make -C Structural/Composite
+    - name: test Composite
+      run: ./Structural/Composite/bin/main.out
 
       
