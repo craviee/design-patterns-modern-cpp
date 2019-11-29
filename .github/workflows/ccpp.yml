@@ -1,45 +1,23 @@
 name: CI
-
 on: [push]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v1
-    - name: make Builder
-      run: make -C Creational/Builder
-    - name: test Builder
-      run: ./Creational/Builder/bin/main.out
-    - name: make Factory
-      run: make -C Creational/Factory
-    - name: test Factory
-      run: ./Creational/Factory/bin/main.out
-    - name: make Prototype
-      run: make -C Creational/Prototype
-    - name: test Prototype
-      run: ./Creational/Prototype/bin/main.out
-    - name: make Singleton
-      run: make -C Creational/Singleton
-    - name: test Singleton
-      run: ./Creational/Singleton/bin/main.out
-    - name: make Adapter
-      run: make -C Structural/Adapter
-    - name: test Adapter
-      run: ./Structural/Adapter/bin/main.out
-    - name: make Bridge
-      run: make -C Structural/Bridge
-    - name: test Bridge
-      run: ./Structural/Bridge/bin/main.out
-    - name: make Composite
-      run: make -C Structural/Composite
-    - name: test Composite
-      run: ./Structural/Composite/bin/main.out
-    - name: make Decorator
-      run: make -C Structural/Decorator
-    - name: test Decorator
-      run: ./Structural/Decorator/bin/main.out
-
-      
+    - name: Builder
+      run: make run -C Creational/Builder
+    - name: Factory
+      run: make run -C Creational/Factory
+    - name: Prototype
+      run: make run -C Creational/Prototype
+    - name: Singleton
+      run: make run -C Creational/Singleton
+    - name: Adapter
+      run: make run -C Structural/Adapter
+    - name: Bridge
+      run: make run -C Structural/Bridge
+    - name: Composite
+      run: make run -C Structural/Composite
+    - name: Decorator
+      run: make run -C Structural/Decorator
