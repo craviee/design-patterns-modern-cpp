@@ -21,3 +21,5 @@ jobs:
       run: make run -C Structural/Composite
     - name: Decorator
       run: make run -C Structural/Decorator
+    - name: Facade
+      run: make run -C Structural/Facade
