@@ -23,3 +23,5 @@ jobs:
       run: make run -C Structural/Decorator
     - name: Facade
       run: make run -C Structural/Facade
+    - name: Flyweight
+      run: make run -C Structural/Flyweight
