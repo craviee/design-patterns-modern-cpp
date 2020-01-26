@@ -25,3 +25,5 @@ jobs:
       run: make run -C Structural/Facade
     - name: Flyweight
       run: make run -C Structural/Flyweight
+    - name: Visitor
+      run: make run -C Behavioral/Visitor
