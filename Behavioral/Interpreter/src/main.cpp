@@ -3,7 +3,7 @@
 
 int main()
 {
-    Lexer l{"3+(5-4)"};
+    Lexer l{"31+(5-4)"};
     auto tokens = l.getTokens();
     for(auto token : tokens)
         std::cout << "main: " << token.toStr() << std::endl;
