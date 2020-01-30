@@ -3,16 +3,21 @@
 #include <iostream>
 #include "Expression.hpp"
 #include "Token.hpp"
+#include "BasicExpression.hpp"
+#include "DoubleExpression.hpp"
+#include "LRExpression.hpp"
 
 class LeftIntExpression : public Expression
 {
     public:
-        LeftIntExpression(int value, TokenType operation, Expression exp) : exp{exp}, operation{operation}, value{value}{};
-        ~LeftIntExpression();
+        LeftIntExpression(){};
+        ~LeftIntExpression(){};
         int eval();
+        int tryParse(int index, std::vector<Token> tokens);
 
     private:
-        TokenType operation;
         int value;
         Expression exp;
+        TokenType operation;
+        
 };

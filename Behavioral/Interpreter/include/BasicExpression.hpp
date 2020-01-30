@@ -7,11 +7,13 @@
 class BasicExpression : public Expression
 {
     public:
-        BasicExpression(int value1, TokenType operation, int value2) : value1{value1}, operation{operation}, value2{value2}{};
-        ~BasicExpression();
+        BasicExpression(){};
+        ~BasicExpression(){};
         int eval();
+        int tryParse(int index, std::vector<Token> tokens);
 
     private:
-        TokenType operation;
         int value1, value2;
+        TokenType operation;
+        
 };

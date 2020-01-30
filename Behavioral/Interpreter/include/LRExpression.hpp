@@ -2,15 +2,20 @@
 
 #include "Expression.hpp"
 #include "Token.hpp"
+#include "BasicExpression.hpp"
+#include "LeftIntExpression.hpp"
+#include "DoubleExpression.hpp"
 
 class LRExpression : public Expression
 {
     public:
-        LRExpression(TokenType lparen, Expression exp, TokenType rparen) : lparen{lparen}, exp{exp}, rparen{rparen}{};
-        ~LRExpression();
+        LRExpression(){};
+        ~LRExpression(){};
         int eval();
+        int tryParse(int index, std::vector<Token> tokens);
 
     private:
-        TokenType lparen,rparen;
         Expression exp;
+        TokenType lparen,rparen;
+
 };

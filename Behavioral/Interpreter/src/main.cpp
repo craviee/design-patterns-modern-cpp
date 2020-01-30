@@ -1,11 +1,14 @@
 #include <iostream>
 #include "Lexer.hpp"
+#include "Parser.hpp"
 
 int main()
 {
-    Lexer l{"31+(5-4)"};
+    Lexer l{"(5+2+1)-(8-3)"};
     auto tokens = l.getTokens();
-    for(auto token : tokens)
-        std::cout << "main: " << token.toStr() << std::endl;
+    Parser parser{tokens};
+    parser.makeParserTree();
+    std::cout << "Value: " << parser.eval() << std::endl;
+
     return 0;
 }

@@ -28,6 +28,8 @@ class Token
                 return "MINUS";
             else if(type == TokenType::PLUS)
                 return "PLUS";
+            else if(type == TokenType::END)
+                return "END";
             else
                 return "????";
         }

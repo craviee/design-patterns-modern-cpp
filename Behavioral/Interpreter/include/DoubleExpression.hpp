@@ -3,15 +3,20 @@
 #include <iostream>
 #include "Expression.hpp"
 #include "Token.hpp"
-
+#include "BasicExpression.hpp"
+#include "LeftIntExpression.hpp"
+#include "LRExpression.hpp"
 class DoubleExpression : public Expression
 {
     public:
-        DoubleExpression(Expression exp1, TokenType operation , Expression exp2) : exp{exp1}, operation{operation}, exp2{exp2}{};
-        ~DoubleExpression();
+        DoubleExpression(){};
+        ~DoubleExpression(){};
         int eval();
+        int tryParse(int index, std::vector<Token> tokens);
+        int trySecondParse(int ret, std::vector<Token> tokens);
 
     private:
-        TokenType operation;
         Expression exp1,exp2;
+        TokenType operation;
+        
 };
