@@ -31,5 +31,7 @@ jobs:
       run: make run -C Behavioral/ChainOfResponsability
     - name: Command
       run: make run -C Behavioral/Command
+    - name: Interpreter
+      run: make run -C Behavioral/Interpreter
     - name: Visitor
       run: make run -C Behavioral/Visitor
