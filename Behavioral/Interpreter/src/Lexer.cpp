@@ -20,28 +20,24 @@ std::vector<Token> Lexer::getTokens()
             if(processingInteger)
                 finishIntegerToken(rawTokens, currentAppend, processingInteger); 
             rawTokens.push_back(Token{TokenType::LPAREN});
-            
         }
         else if (c == ')')
         {
             if(processingInteger)
                 finishIntegerToken(rawTokens, currentAppend, processingInteger); 
             rawTokens.push_back(Token{TokenType::RPAREN});
-            
         }
         else if (c == '+')
         {
             if(processingInteger)
                 finishIntegerToken(rawTokens, currentAppend, processingInteger); 
             rawTokens.push_back(Token{TokenType::PLUS});
-            
         }
         else if (c == '-')
         {
             if(processingInteger)
                 finishIntegerToken(rawTokens, currentAppend, processingInteger); 
             rawTokens.push_back(Token{TokenType::MINUS});
-            
         }
         else if (std::isdigit(c))
         {
@@ -49,6 +45,9 @@ std::vector<Token> Lexer::getTokens()
             currentAppend += c;
         }
     }
+
+    if(processingInteger)
+        finishIntegerToken(rawTokens, currentAppend, processingInteger); 
 
     return rawTokens;  
 }
