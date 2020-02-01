@@ -33,5 +33,7 @@ jobs:
       run: make run -C Behavioral/Command
     - name: Interpreter
       run: make run -C Behavioral/Interpreter
+    - name: Iterator
+      run: make run -C Behavioral/Iterator
     - name: Visitor
       run: make run -C Behavioral/Visitor
