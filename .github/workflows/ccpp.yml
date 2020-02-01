@@ -35,5 +35,7 @@ jobs:
       run: make run -C Behavioral/Interpreter
     - name: Iterator
       run: make run -C Behavioral/Iterator
+    - name: Mediator
+      run: make run -C Behavioral/Mediator
     - name: Visitor
       run: make run -C Behavioral/Visitor
