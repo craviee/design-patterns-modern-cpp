@@ -37,5 +37,7 @@ jobs:
       run: make run -C Behavioral/Iterator
     - name: Mediator
       run: make run -C Behavioral/Mediator
+    - name: Memento
+      run: make run -C Behavioral/Memento
     - name: Visitor
       run: make run -C Behavioral/Visitor
