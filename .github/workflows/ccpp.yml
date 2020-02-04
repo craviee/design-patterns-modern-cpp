@@ -39,5 +39,7 @@ jobs:
       run: make run -C Behavioral/Mediator
     - name: Memento
       run: make run -C Behavioral/Memento
+    - name: NullObject
+      run: make run -C Behavioral/NullObject
     - name: Visitor
       run: make run -C Behavioral/Visitor
