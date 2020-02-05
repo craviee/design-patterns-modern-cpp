@@ -41,5 +41,7 @@ jobs:
       run: make run -C Behavioral/Memento
     - name: NullObject
       run: make run -C Behavioral/NullObject
+    - name: Observer
+      run: make run -C Behavioral/Observer
     - name: Visitor
       run: make run -C Behavioral/Visitor
