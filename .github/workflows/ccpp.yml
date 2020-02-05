@@ -47,5 +47,7 @@ jobs:
       run: make run -C Behavioral/State
     - name: Strategy
       run: make run -C Behavioral/Strategy
+    - name: Template
+      run: make run -C Behavioral/Template
     - name: Visitor
       run: make run -C Behavioral/Visitor
